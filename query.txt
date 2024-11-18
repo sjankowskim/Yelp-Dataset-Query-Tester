@@ -1,0 +1,3 @@
+SELECT *
+FROM business
+WHERE stars = 5.0
