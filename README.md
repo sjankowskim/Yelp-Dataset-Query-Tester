@@ -11,7 +11,7 @@ The first step then before running anything is to obtain the `yelp_dataset`. Dow
 Next, run `parser.py` using Python. This should create four new files in the `/data` folder (NOT `/data/yelp_dataset`): `yelp_academic_dataset_review.tsv`, `yelp_academic_dataset_business.tsv`, `yelp_academic_dataset_review.tsv`, and `yelp_academic_dataset_tip.txv`. 
 Note that it might give you an error saying "invalid control character at...". I have wrapped this in a try-except block and simply ignore the lines that cause this issue.
 
-Unfortunately, we are still not yet done. In yelp's infinite wisdom, they added duplicate data to their dataset which was not handled by the python script. This would be problematic once we want to create the databse in SQLite 3. We can fix this using some UNIX commands. Traverse into the `/data` directory and paste the following into the console...
+Unfortunately, we are still not yet done. In yelp's infinite wisdom, they added duplicate data to their dataset which was not handled by the python script. This would be problematic once we want to create the databse in SQLite 3. We can fix this using some UNIX commands. Paste the following into the console...
 `head -n 1 data/yelp_academic_dataset_tip.tsv > temp_file.tsv && tail -n +2 data/yelp_academic_dataset_tip.tsv | sort -t$'\t' -k2,2 -k4,4 -k5,5 | awk -F'\t' '!seen[$2 FS $4 FS $5]++' >> temp_file.tsv && mv temp_file.tsv data/yelp_academic_dataset_tip.tsv && sed -i '2d' data/yelp_academic_dataset_tip.tsv`
 
 Before running the program, ensure that the `/data` directory is populated with all the appropriate TSV files:
