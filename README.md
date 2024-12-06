@@ -59,3 +59,6 @@ Upon launching the executable, you will be prompted to type `'y'` to execute the
   This will bypass reloading the dataset and instead use the `moviedb.sqlite` that already exists. 
 
 *Important:* If you haven't generated this for the first time or have overwritten it with incomplete data, you should not use the `--preserve` parameter.
+
+## References
+[Link to Yelp Dataset Results](https://docs.google.com/spreadsheets/d/1fXLq7VIqE43dMvX8fz2nLgQpL1GGSYMEIPNeYAj6h3M/edit?usp=sharing)
