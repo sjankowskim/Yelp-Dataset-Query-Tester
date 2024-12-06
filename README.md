@@ -62,3 +62,4 @@ Upon launching the executable, you will be prompted to type `'y'` to execute the
 
 ## References
 [Link to Yelp Dataset Results](https://docs.google.com/spreadsheets/d/1fXLq7VIqE43dMvX8fz2nLgQpL1GGSYMEIPNeYAj6h3M/edit?usp=sharing)
+[Link to Yelp Dataset Queries](https://docs.google.com/document/d/1SkUqbthP3ogt1LA4Ic5fxAhFp00Iwx62aW3iXBnb0l0/edit?usp=sharing)
